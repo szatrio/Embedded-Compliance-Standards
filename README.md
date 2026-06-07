@@ -139,6 +139,134 @@ Guidelines for safe, reliable, and portable C programming.
 | **Rule 12.3** | Advisory |  | The comma operator should not be used |
 | **Rule 12.4** | Advisory |  | Evaluation of constant expressions should not lead to unsigned integer wrap-around |
 
+#### 13. Side effects
+
+| Rule ID | Category | Status | Rule Title |
+| :--- | :--- | :--- | :--- |
+| **Rule 13.1** | Required |  | Initializer lists shall not contain persistent side effects |
+| **Rule 13.2** | Required |  | The value of an expression and its persistent side effects shall be the same under all permitted evaluation orders |
+| **Rule 13.3** | Advisory |  | A full expression containing an increment (++) or decrement (--) operator should have no other potential side effects other than that caused by the increment or decrement operator |
+| **Rule 13.4** | Advisory |  | The result of an assignment operator should not be used |
+| **Rule 13.5** | Required |  | The right hand operand of a logical && or || operator shall not contain persistent side effects |
+| **Rule 13.6** | Mandatory |  | The operand of the sizeof operator shall not contain any expression which has potential side effects |
+
+#### 14. Control statement expressions
+
+| Rule ID | Category | Status | Rule Title |
+| :--- | :--- | :--- | :--- |
+| **Rule 14.1** | Required |  | A loop counter shall not have essentially floating type |
+| **Rule 14.2** | Required |  | A for loop shall be well-formed |
+| **Rule 14.3** | Required |  | Controlling expressions shall not be invariant |
+| **Rule 14.4** | Required |  | The controlling expression of an if statement and the controlling expression of an iteration-statement shall have essentially Boolean type |
+
+#### 15. Control Flow
+
+| Rule ID | Category | Status | Rule Title |
+| :--- | :--- | :--- | :--- |
+| **Rule 15.1** | Advisory |  | The goto statement should not be used |
+| **Rule 15.2** | Required |  | The goto statement shall jump to a label declared later in the same function |
+| **Rule 15.3** | Required |  | Any label referenced by a goto statement shall be declared in the same block, or in any block enclosing the goto statement |
+| **Rule 15.4** | Advisory |  | There should be no more than one break or goto statement used to terminate any iteration statement |
+| **Rule 15.5** | Advisory |  | A function should have a single point of exit at the end |
+| **Rule 15.6** | Required |  | The body of an iteration-statement or a selection-statement shall be a compound-statement |
+| **Rule 15.7** | Required |  | All if … else if constructs shall be terminated with an else statement |
+
+#### 16. Switch statements
+
+| Rule ID | Category | Status | Rule Title |
+| :--- | :--- | :--- | :--- |
+| **Rule 16.1** | Required |  | All switch statements shall be well-formed |
+| **Rule 16.2** | Required |  | A switch label shall only be used when the most closely-enclosing compound statement is the body of a switch statement |
+| **Rule 16.3** | Required |  | An unconditional break statement shall terminate every switch-clause |
+| **Rule 16.4** | Required |  | Every switch statement shall have a default label |
+| **Rule 16.5** | Required |  | A default label shall appear as either the first or the last switch label of a switch statement |
+| **Rule 16.6** | Required |  | Every switch statement shall have at least two switch-clauses |
+| **Rule 16.7** | Required |  | A switch-expression shall not have essentially Boolean type |
+
+#### 17. Functions
+
+| Rule ID | Category | Status | Rule Title |
+| :--- | :--- | :--- | :--- |
+| **Rule 17.1** | Required |  | The features of <stdarg.h> shall not be used |
+| **Rule 17.2** | Required |  | Functions shall not call themselves, either directly or indirectly |
+| **Rule 17.3** | Mandatory |  | A function shall not be declared implicitly |
+| **Rule 17.4** | Mandatory |  | All exit paths from a function with non-void return type shall have an explicit return statement with an expression |
+| **Rule 17.5** | Advisory |  | The function argument corresponding to a parameter declared to have an array type shall have an appropriate number of elements |
+| **Rule 17.6** | Mandatory |  | The declaration of an array parameter shall not contain the static keyword between the [ ] |
+| **Rule 17.7** | Required |  | The value returned by a function having non-void return type shall be used |
+| **Rule 17.8** | Advisory |  | A function parameter should not be modified |
+
+
+#### 18. Pointers and arrays
+
+| Rule ID | Category | Status | Rule Title |
+| :--- | :--- | :--- | :--- |
+| **Rule 18.1** | Required |  | A pointer resulting from arithmetic on a pointer operand shall address an element of the same array as that pointer operand |
+| **Rule 18.2** | Required |  | Subtraction between pointers shall only be applied to pointers that address elements of the same array |
+| **Rule 18.3** | Required |  | The relational operators >, >=, < and <= shall not be applied to objects of pointer type except where they point into the same object |
+| **Rule 18.4** | Advisory |  | The +, -, += and -= operators should not be applied to an expression of pointer type |
+| **Rule 18.5** | Advisory |  | Declarations should contain no more than two levels of pointer nesting |
+| **Rule 18.6** | Required |  | The address of an object with automatic storage shall not be copied to another object that persists after the first object has ceased to exist |
+| **Rule 18.7** | Required |  | Flexible array members shall not be declared |
+| **Rule 18.8** | Required |  | Variable-length array types shall not be used |
+
+
+#### 19. Overlapping storage
+
+| Rule ID | Category | Status | Rule Title |
+| :--- | :--- | :--- | :--- |
+| **Rule 19.1** | Mandatory |  | An object shall not be assigned or copied to an overlapping object |
+| **Rule 19.2** | Advisory |  | The union keyword should not be used |
+
+#### 20. Preprocessing directives
+
+| Rule ID | Category | Status | Rule Title |
+| :--- | :--- | :--- | :--- |
+| **Rule 20.1** | Advisory |  | #include directives should only be preceded by preprocessor directives or comments |
+| **Rule 20.2** | Required |  | The ', " or \ characters and the /* or // character sequences shall not occur in a header file name |
+| **Rule 20.3** | Required |  | The #include directive shall be followed by either a <filename> or "filename" sequence |
+| **Rule 20.4** | Required |  | A macro shall not be defined with the same name as a keyword |
+| **Rule 20.5** | Advisory |  | #undef should not be used |
+| **Rule 20.6** | Required |  | Tokens that look like a preprocessing directive shall not occur within a macro argument |
+| **Rule 20.7** | Required |  | Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses |
+| **Rule 20.8** | Required |  | The controlling expression of a #if or #elif preprocessing directive shall evaluate to 0 or 1 |
+| **Rule 20.9** | Required |  | All identifiers used in the controlling expression of #if or #elif preprocessing directives shall be #define’d before evaluation |
+| **Rule 20.10** | Advisory |  | The # and ## preprocessor operators should not be used |
+| **Rule 20.11** | Required |  | A macro parameter immediately following a # operator shall not immediately be followed by a ## operator |
+| **Rule 20.12** | Required |  | A macro parameter used as an operand to the # or ## operators, which is itself subject to further macro replacement, shall only be used as an operand to these operators |
+| **Rule 20.13** | Required |  | A line whose first token is # shall be a valid preprocessing directive |
+| **Rule 20.14** | Required |  | All #else, #elif and #endif preprocessor directives shall reside in the same file as the #if, #ifdef or #ifndef directive to which they are related |
+
+#### 21. Standard libraries
+
+| Rule ID | Category | Status | Rule Title |
+| :--- | :--- | :--- | :--- |
+| **Rule 21.1** | Required |  | #define and #undef shall not be used on a reserved identifier or reserved macro name |
+| **Rule 21.2** | Required |  | A reserved identifier or macro name shall not be declared |
+| **Rule 21.3** | Required |  | The memory allocation and deallocation functions of <stdlib.h> shall not be used |
+| **Rule 21.4** | Required |  | The standard header file <setjmp.h> shall not be used |
+| **Rule 21.5** | Required |  | The standard header file <signal.h> shall not be used |
+| **Rule 21.6** | Required |  | The Standard Library input/output functions shall not be used |
+| **Rule 21.7** | Required |  | The atof, atoi, atol and atoll functions of <stdlib.h> shall not be used |
+| **Rule 21.8** | Required |  | The library functions abort, exit, getenv and system of <stdlib.h> shall not be used |
+| **Rule 21.9** | Required |  | The library functions bsearch and qsort of <stdlib.h> shall not be used |
+| **Rule 21.10** | Required |  | The Standard Library time and date functions shall not be used |
+| **Rule 21.11** | Required |  | The standard header file <tgmath.h> shall not be used |
+| **Rule 21.12** | Advisory |  | The exception handling features of <fenv.h> should not be used |
+
+#### 22. Resources
+
+| Rule ID | Category | Status | Rule Title |
+| :--- | :--- | :--- | :--- |
+| **Rule 22.1** | Required |  | All resources obtained dynamically by means of Standard Library functions shall be explicitly released |
+| **Rule 22.2** | Mandatory |  | A block of memory shall only be freed if it was allocated by means of a Standard Library function |
+| **Rule 22.3** | Required |  | The same file shall not be open for read and write access at the same time on different streams |
+| **Rule 22.4** | Mandatory |  | There shall be no attempt to write to a stream which has been opened as read-only |
+| **Rule 22.5** | Mandatory |  | A pointer to a FILE object shall not be dereferenced |
+| **Rule 22.6** | Mandatory |  | The value of a pointer to a FILE shall not be used after the associated stream has been closed |
+
+
+
 ---
 
 ## Future Roadmap
