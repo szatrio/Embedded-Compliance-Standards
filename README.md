@@ -42,7 +42,7 @@ Guidelines for safe, reliable, and portable C programming.
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
 | **Rule 4.1** | Required |  | Octal and hexadecimal escape sequences shall be terminated |
-| **Rule 4.2** | Advisory |  | Trigraphs should not be used |
+| **Rule 4.2** | Advisory | ✅ | Trigraphs should not be used |
 
 #### 5. Identifiers
 
@@ -84,7 +84,7 @@ Guidelines for safe, reliable, and portable C programming.
 | **Rule 8.4** | Required |  | A compatible declaration shall be visible when an object or function with external linkage is defined |
 | **Rule 8.5** | Required |  | An external object or function shall be declared once in one and only one file |
 | **Rule 8.6** | Required |  | An identifier with external linkage shall have exactly one external definition |
-| **Rule 8.7** | Advisory |  | Functions and objects should not be defined with external linkage if they are referenced in only one translation unit |
+| **Rule 8.7** | Advisory | ✅ | Functions and objects should not be defined with external linkage if they are referenced in only one translation unit |
 | **Rule 8.8** | Required |  | The static storage class specifier shall be used in all declarations of objects and functions that have internal linkage |
 | **Rule 8.9** | Advisory |  | An object should be defined at block scope if its identifier only appears in a single function |
 | **Rule 8.10** | Required |  | An inline function shall be declared with the static storage class |
@@ -107,9 +107,9 @@ Guidelines for safe, reliable, and portable C programming.
 
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
-| **Rule 10.1** | Required |  | Operands shall not be of an inappropriate essential type |
+| **Rule 10.1** | Required | ✅ | Operands shall not be of an inappropriate essential type |
 | **Rule 10.2** | Required |  | Expressions of essentially character type shall not be used inappropriately in addition and subtraction operations |
-| **Rule 10.3** | Required |  | The value of an expression shall not be assigned to an object with a narrower essential type or of a different essential type category |
+| **Rule 10.3** | Required | ✅ | The value of an expression shall not be assigned to an object with a narrower essential type or of a different essential type category |
 | **Rule 10.4** | Required |  | Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category |
 | **Rule 10.5** | Advisory |  | The value of an expression should not be cast to an inappropriate essential type |
 | **Rule 10.6** | Required |  | The value of a composite expression shall not be assigned to an object with wider essential type |
@@ -122,8 +122,8 @@ Guidelines for safe, reliable, and portable C programming.
 | :--- | :--- | :--- | :--- |
 | **Rule 11.1** | Required |  | Conversions shall not be performed between a pointer to a function and any other type |
 | **Rule 11.2** | Required |  | Conversions shall not be performed between a pointer to an incomplete type and any other type |
-| **Rule 11.3** | Required |  | A cast shall not be performed between a pointer to object type and a pointer to a different object type |
-| **Rule 11.4** | Advisory |  | A conversion should not be performed between a pointer to object and an integer type |
+| **Rule 11.3** | Required | ✅ | A cast shall not be performed between a pointer to object type and a pointer to a different object type |
+| **Rule 11.4** | Advisory | ✅ | A conversion should not be performed between a pointer to object and an integer type |
 | **Rule 11.5** | Advisory |  | A conversion should not be performed from pointer to void into pointer to object |
 | **Rule 11.6** | Required |  | A cast shall not be performed between pointer to void and an arithmetic type |
 | **Rule 11.7** | Required |  | A cast shall not be performed between pointer to object and a non- integer arithmetic type |
@@ -134,7 +134,7 @@ Guidelines for safe, reliable, and portable C programming.
 
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
-| **Rule 12.1** | Advisory |  | The precedence of operators within expressions should be made explicit |
+| **Rule 12.1** | Advisory | ✅ | The precedence of operators within expressions should be made explicit |
 | **Rule 12.2** | Required |  | The right hand operand of a shift operator shall lie in the range zero to one less than the width in bits of the essential type of the left hand operand |
 | **Rule 12.3** | Advisory |  | The comma operator should not be used |
 | **Rule 12.4** | Advisory |  | Evaluation of constant expressions should not lead to unsigned integer wrap-around |
@@ -144,7 +144,7 @@ Guidelines for safe, reliable, and portable C programming.
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
 | **Rule 13.1** | Required |  | Initializer lists shall not contain persistent side effects |
-| **Rule 13.2** | Required |  | The value of an expression and its persistent side effects shall be the same under all permitted evaluation orders |
+| **Rule 13.2** | Required | ✅ | The value of an expression and its persistent side effects shall be the same under all permitted evaluation orders |
 | **Rule 13.3** | Advisory |  | A full expression containing an increment (++) or decrement (--) operator should have no other potential side effects other than that caused by the increment or decrement operator |
 | **Rule 13.4** | Advisory |  | The result of an assignment operator should not be used |
 | **Rule 13.5** | Required |  | The right hand operand of a logical && or || operator shall not contain persistent side effects |
@@ -157,19 +157,19 @@ Guidelines for safe, reliable, and portable C programming.
 | **Rule 14.1** | Required |  | A loop counter shall not have essentially floating type |
 | **Rule 14.2** | Required |  | A for loop shall be well-formed |
 | **Rule 14.3** | Required |  | Controlling expressions shall not be invariant |
-| **Rule 14.4** | Required |  | The controlling expression of an if statement and the controlling expression of an iteration-statement shall have essentially Boolean type |
+| **Rule 14.4** | Required | ✅ | The controlling expression of an if statement and the controlling expression of an iteration-statement shall have essentially Boolean type |
 
 #### 15. Control Flow
 
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
-| **Rule 15.1** | Advisory |  | The goto statement should not be used |
+| **Rule 15.1** | Advisory | ✅ | The goto statement should not be used |
 | **Rule 15.2** | Required |  | The goto statement shall jump to a label declared later in the same function |
 | **Rule 15.3** | Required |  | Any label referenced by a goto statement shall be declared in the same block, or in any block enclosing the goto statement |
 | **Rule 15.4** | Advisory |  | There should be no more than one break or goto statement used to terminate any iteration statement |
 | **Rule 15.5** | Advisory |  | A function should have a single point of exit at the end |
-| **Rule 15.6** | Required |  | The body of an iteration-statement or a selection-statement shall be a compound-statement |
-| **Rule 15.7** | Required |  | All if … else if constructs shall be terminated with an else statement |
+| **Rule 15.6** | Required | ✅ | The body of an iteration-statement or a selection-statement shall be a compound-statement |
+| **Rule 15.7** | Required | ✅ | All if … else if constructs shall be terminated with an else statement |
 
 #### 16. Switch statements
 
@@ -178,7 +178,7 @@ Guidelines for safe, reliable, and portable C programming.
 | **Rule 16.1** | Required |  | All switch statements shall be well-formed |
 | **Rule 16.2** | Required |  | A switch label shall only be used when the most closely-enclosing compound statement is the body of a switch statement |
 | **Rule 16.3** | Required |  | An unconditional break statement shall terminate every switch-clause |
-| **Rule 16.4** | Required |  | Every switch statement shall have a default label |
+| **Rule 16.4** | Required | ✅ | Every switch statement shall have a default label |
 | **Rule 16.5** | Required |  | A default label shall appear as either the first or the last switch label of a switch statement |
 | **Rule 16.6** | Required |  | Every switch statement shall have at least two switch-clauses |
 | **Rule 16.7** | Required |  | A switch-expression shall not have essentially Boolean type |
@@ -188,12 +188,12 @@ Guidelines for safe, reliable, and portable C programming.
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
 | **Rule 17.1** | Required |  | The features of <stdarg.h> shall not be used |
-| **Rule 17.2** | Required |  | Functions shall not call themselves, either directly or indirectly |
-| **Rule 17.3** | Mandatory |  | A function shall not be declared implicitly |
+| **Rule 17.2** | Required | ✅ | Functions shall not call themselves, either directly or indirectly |
+| **Rule 17.3** | Mandatory | ✅ | A function shall not be declared implicitly |
 | **Rule 17.4** | Mandatory |  | All exit paths from a function with non-void return type shall have an explicit return statement with an expression |
 | **Rule 17.5** | Advisory |  | The function argument corresponding to a parameter declared to have an array type shall have an appropriate number of elements |
 | **Rule 17.6** | Mandatory |  | The declaration of an array parameter shall not contain the static keyword between the [ ] |
-| **Rule 17.7** | Required |  | The value returned by a function having non-void return type shall be used |
+| **Rule 17.7** | Required | ✅ | The value returned by a function having non-void return type shall be used |
 | **Rule 17.8** | Advisory |  | A function parameter should not be modified |
 
 
@@ -201,10 +201,10 @@ Guidelines for safe, reliable, and portable C programming.
 
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
-| **Rule 18.1** | Required |  | A pointer resulting from arithmetic on a pointer operand shall address an element of the same array as that pointer operand |
-| **Rule 18.2** | Required |  | Subtraction between pointers shall only be applied to pointers that address elements of the same array |
+| **Rule 18.1** | Required | ✅ | A pointer resulting from arithmetic on a pointer operand shall address an element of the same array as that pointer operand |
+| **Rule 18.2** | Required | ✅ | Subtraction between pointers shall only be applied to pointers that address elements of the same array |
 | **Rule 18.3** | Required |  | The relational operators >, >=, < and <= shall not be applied to objects of pointer type except where they point into the same object |
-| **Rule 18.4** | Advisory |  | The +, -, += and -= operators should not be applied to an expression of pointer type |
+| **Rule 18.4** | Advisory | ✅ | The +, -, += and -= operators should not be applied to an expression of pointer type |
 | **Rule 18.5** | Advisory |  | Declarations should contain no more than two levels of pointer nesting |
 | **Rule 18.6** | Required |  | The address of an object with automatic storage shall not be copied to another object that persists after the first object has ceased to exist |
 | **Rule 18.7** | Required |  | Flexible array members shall not be declared |
@@ -228,7 +228,7 @@ Guidelines for safe, reliable, and portable C programming.
 | **Rule 20.4** | Required |  | A macro shall not be defined with the same name as a keyword |
 | **Rule 20.5** | Advisory |  | #undef should not be used |
 | **Rule 20.6** | Required |  | Tokens that look like a preprocessing directive shall not occur within a macro argument |
-| **Rule 20.7** | Required |  | Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses |
+| **Rule 20.7** | Required | ✅ | Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses |
 | **Rule 20.8** | Required |  | The controlling expression of a #if or #elif preprocessing directive shall evaluate to 0 or 1 |
 | **Rule 20.9** | Required |  | All identifiers used in the controlling expression of #if or #elif preprocessing directives shall be #define’d before evaluation |
 | **Rule 20.10** | Advisory |  | The # and ## preprocessor operators should not be used |
@@ -241,9 +241,9 @@ Guidelines for safe, reliable, and portable C programming.
 
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
-| **Rule 21.1** | Required |  | #define and #undef shall not be used on a reserved identifier or reserved macro name |
+| **Rule 21.1** | Required | ✅ | #define and #undef shall not be used on a reserved identifier or reserved macro name |
 | **Rule 21.2** | Required |  | A reserved identifier or macro name shall not be declared |
-| **Rule 21.3** | Required |  | The memory allocation and deallocation functions of <stdlib.h> shall not be used |
+| **Rule 21.3** | Required | ✅ | The memory allocation and deallocation functions of <stdlib.h> shall not be used |
 | **Rule 21.4** | Required |  | The standard header file <setjmp.h> shall not be used |
 | **Rule 21.5** | Required |  | The standard header file <signal.h> shall not be used |
 | **Rule 21.6** | Required |  | The Standard Library input/output functions shall not be used |

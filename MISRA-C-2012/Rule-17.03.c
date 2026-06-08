@@ -2,23 +2,33 @@
 
 /**
  * Compliance Check: MISRA C:2012 Rule 17.3
- * Rule: The freshness of the value of a function parameter shall not be modified.
+ * Rule: A function shall not be declared implicitly.
  */
 
 /* --- NON-COMPLIANT --- */
-/* Modifying the parameter 'input_val' directly changes the local value,
-   which can lead to confusion if the original intent was to keep it intact. */
-void process_value_bad(uint16_t input_val) {
-    input_val = input_val + 10U; /* Violation: Modifying parameter directly */
-    /* ... rest of logic ... */
+/* Calling a function without a prior prototype forces the compiler 
+   to make implicit assumptions about the function's signature. */
+void process_data_bad(void) {
+    uint16_t x = 10U;
+    
+    /* Violation: 'calculate_square' is not declared yet. 
+       The compiler assumes int calculate_square() */
+    uint16_t result = calculate_square(x); 
 }
 
 /* --- MISRA COMPLIANT --- */
-/* Use a local variable to perform calculations. This keeps the 
-   original 'input_val' unchanged and clearly defines the scope of changes. */
-void process_value_good(uint16_t input_val) {
-    uint16_t local_val = input_val;
+/* The prototype provides the compiler with the function's signature
+   before it is called, ensuring type safety and explicit declaration. */
+static uint16_t calculate_square(uint16_t input_val);
+
+void process_data_good(void) {
+    uint16_t x = 10U;
     
-    local_val = local_val + 10U; /* Safely modify local copy */
-    /* ... rest of logic ... */
+    /* Compliant: Prototype is visible, so the call is explicit. */
+    uint16_t result = calculate_square(x); 
+}
+
+/* Function definition */
+static uint16_t calculate_square(uint16_t input_val) {
+    return (uint16_t)(input_val * input_val);
 }

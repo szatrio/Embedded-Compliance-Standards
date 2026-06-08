@@ -2,8 +2,7 @@
 
 /**
  * Compliance Check: MISRA C:2012 Rule 11.4
- * Rule: Avoid conversion between pointers and integers, 
- * except for explicit memory-mapped peripheral register access.
+ * Rule: A conversion should not be performed between a pointer to object and an integer type.
  */
 void test_compliance_11_4(void) {
     

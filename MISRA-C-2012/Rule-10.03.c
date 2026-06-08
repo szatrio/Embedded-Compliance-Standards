@@ -2,8 +2,8 @@
 
 /**
  * Compliance Check: MISRA C:2012 Rule 10.3
- * Rule: Explicit casting is mandatory when assigning a value to a narrower 
- * or different essential type category to prevent implicit truncation.
+ * Rule: The value of an expression shall not be assigned to an object with a
+ * narrower essential type or of a different essential type category.
  */
 void test_compliance_10_3(void) {
     uint16_t raw_adc_sensor_data = 512;

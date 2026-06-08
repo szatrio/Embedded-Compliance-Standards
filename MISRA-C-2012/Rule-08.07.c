@@ -1,8 +1,8 @@
 #include <stdint.h>
 
 /* 
- * Rule 8.7: Functions and variables used in only one file 
- *           must be declared as 'static'.
+ * Rule 8.7: Functions and objects should not be defined with external linkage if
+ * they are referenced in only one translation unit.
  */
 
 /* Internal variable used only in this file */

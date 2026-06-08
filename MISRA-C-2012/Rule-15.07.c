@@ -2,8 +2,7 @@
 
 /**
  * Compliance Check: MISRA C:2012 Rule 15.7
- * Rule: All if ... else if constructs shall be terminated with an else statement
- * to ensure all logical paths are explicitly accounted for.
+ * Rule: All if ... else if constructs shall be terminated with an else statement.
  */
 void test_compliance_15_7(uint8_t system_mode) {
     

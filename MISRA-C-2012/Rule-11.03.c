@@ -2,8 +2,8 @@
 
 /**
  * Compliance Check: MISRA C:2012 Rule 11.3
- * Rule: A cast shall not be performed between pointers to different object types
- * to prevent Memory Alignment Faults and undefined behavior.
+ * A cast shall not be performed between a pointer to object type and a
+ * pointer to a different object type
  */
 void test_compliance_11_3(void) {
     

@@ -3,8 +3,7 @@
 
 /**
  * Compliance Check: MISRA C:2012 Rule 17.7
- * Rule: The value returned by a function having void extension shall be utilized 
- * or explicitly cast to void if ignored.
+ * Rule: The value returned by a function having non-void return type shall be used.
  */
 typedef struct {
     uint32_t status_code;

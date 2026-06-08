@@ -3,8 +3,7 @@
 
 /**
  * Compliance Check: MISRA C:2012 Rule 12.1
- * Rule: The precedence of operators within expressions should be explicit 
- * through the use of parentheses to prevent priority ambiguity.
+ * Rule: The precedence of operators within expressions should be made explicit
  */
 void test_compliance_12_1(void) {
     

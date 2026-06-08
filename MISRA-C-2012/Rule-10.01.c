@@ -2,7 +2,7 @@
 
 /**
  * Compliance Check: MISRA C:2012 Rule 10.1
- * Rule: Operands to a bitwise operator shall have an essentially unsigned type.
+ * Rule: Operands shall not be of an inappropriate essential type.
  */
 void test_compliance_10_01(void) {
     

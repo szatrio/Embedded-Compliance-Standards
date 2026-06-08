@@ -3,7 +3,7 @@
 
 /**
  * Compliance Check: MISRA C:2012 Rule 15.1
- * Rule: The goto statement shall not be used.
+ * Rule: The goto statement should not be used.
  */
 void test_compliance_15_1(bool hardware_fault_detected) {
     

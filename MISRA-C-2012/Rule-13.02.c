@@ -2,8 +2,8 @@
 
 /**
  * Compliance Check: MISRA C:2012 Rule 13.2
- * Rule: The value of an expression and its common sub-expressions 
- * shall be the same under all allowed orders of evaluation.
+ * Rule: The value of an expression and its persistent side effects shall be the
+ * same under all permitted evaluation orders.
  */
 void test_compliance_13_2(void) {
     

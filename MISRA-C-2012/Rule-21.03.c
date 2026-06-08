@@ -1,38 +1,34 @@
 #include <stdint.h>
 #include <stddef.h>
-
-/* Define a fixed maximum capacity for our system */
-#define MAX_SENSOR_LOGS  100U
-
-typedef struct {
-    uint32_t timestamp;
-    int32_t reading;
-} SensorData_t;
+#include <stdlib.h> /* The use of malloc/free from this library is restricted by Rule 21.3 */
 
 /**
  * Compliance Check: MISRA C:2012 Rule 21.3
- * Rule: Dynamic memory allocation (malloc/free) is strictly prohibited.
- * All memory allocation must be static or stack-based.
+ * Rule: The memory allocation and deallocation functions of <stdlib.h> shall not be used.
  */
-void test_compliance_21_3(void) {
+
+/* Fixed-size buffer to replace dynamic memory */
+#define MAX_BUFFER_SIZE 10U
+
+/* --- NON-COMPLIANT --- */
+/* Using dynamic memory allocation via malloc/free violates Rule 21.3. */
+void process_data_bad(void) {
+    /* Violation: 'malloc' is a dynamic memory allocation function from <stdlib.h> */
+    uint16_t *ptr = (uint16_t *)malloc(sizeof(uint16_t) * MAX_BUFFER_SIZE);
     
-    /* --- NON-COMPLIANT --- */
-    /* Requesting memory from Heap at runtime. 
-       Risks: Heap fragmentation, NULL pointer returns, and memory leaks if forgotten to free. */
-    // SensorData_t *dynamic_log = (SensorData_t *)malloc(sizeof(SensorData_t) * MAX_SENSOR_LOGS);
+    if (ptr != NULL) {
+        ptr[0] = 100U;
+        free(ptr); /* Violation: 'free' is also prohibited */
+    }
+}
+
+/* --- MISRA COMPLIANT --- */
+/* Static allocation ensures memory is determined at compile-time, 
+   removing heap-related risks like fragmentation or allocation failures. */
+void process_data_good(void) {
+    /* Compliant: Static buffer is allocated in the data segment, 
+       not the heap, and does not require <stdlib.h> functions. */
+    static uint16_t static_buffer[MAX_BUFFER_SIZE];
     
-    // if (dynamic_log != NULL) {
-    //     dynamic_log[0].reading = 450;
-    //     free(dynamic_log); /* Dangerous if pointer is accessed after this line */
-    // }
-
-
-    /* --- MISRA COMPLIANT (Static Allocation) --- */
-    /* Allocate a fixed-size buffer globally or locally on the Stack/Data section.
-       The memory footprint is determined entirely at compile-time. No surprises at runtime. */
-    static SensorData_t static_sensor_logs[MAX_SENSOR_LOGS];
-
-    /* Safe and deterministic access */
-    static_sensor_logs[0].timestamp = 1000U;
-    static_sensor_logs[0].reading = 450;
+    static_buffer[0] = 100U;
 }

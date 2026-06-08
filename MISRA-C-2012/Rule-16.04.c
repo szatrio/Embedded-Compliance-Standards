@@ -2,8 +2,7 @@
 
 /**
  * Compliance Check: MISRA C:2012 Rule 16.4
- * Rule: Every switch statement shall have a default label to handle 
- * unexpected or out-of-range values.
+ * Rule: Every switch statement shall have a default label to handle.
  */
 void test_compliance_16_4(uint8_t error_code) {
     

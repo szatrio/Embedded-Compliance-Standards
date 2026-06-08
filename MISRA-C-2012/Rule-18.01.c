@@ -3,8 +3,8 @@
 
 /**
  * Compliance Check: MISRA C:2012 Rule 18.1
- * Rule: A pointer resulting from arithmetic on a pointer operand shall 
- * address an element of the same array or a location one past the end of the array.
+ * Rule: A pointer resulting from arithmetic on a pointer operand shall address
+ * an element of the same array as that pointer operand.
  */
 void test_compliance_18_1(void) {
     

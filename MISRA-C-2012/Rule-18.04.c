@@ -3,8 +3,7 @@
 
 /**
  * Compliance Check: MISRA C:2012 Rule 18.4
- * Rule: Operator +/- shall not be applied to an expression of pointer type 
- * unless it is used to index an array.
+ * Rule: The +, -, += and -= operators should not be applied to an expression of pointer type.
  */
 void test_compliance_18_4(void) {
     

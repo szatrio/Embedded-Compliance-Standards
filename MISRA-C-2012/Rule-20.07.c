@@ -2,8 +2,7 @@
 
 /**
  * Compliance Check: MISRA C:2012 Rule 20.7
- * Rule: Expressions resulting from the expansion of macro parameters 
- * shall be enclosed in parentheses to prevent operator precedence issues.
+ * Rule:Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses.
  */
 
 /* --- NON-COMPLIANT --- */

@@ -3,8 +3,8 @@
 
 /**
  * Compliance Check: MISRA C:2012 Rule 14.4
- * Rule: The controlling expression of an if-statement or a iteration-statement 
- * shall have an essentially Boolean type to prevent implicit integer-to-boolean conversions.
+ * Rule: The controlling expression of an if statement and the controlling
+ * expression of an iteration-statement shall have essentially Boolean type.
  */
 void test_compliance_14_4(void) {
     

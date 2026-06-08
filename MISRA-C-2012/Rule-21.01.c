@@ -3,8 +3,7 @@
 
 /**
  * Compliance Check: MISRA C:2012 Rule 21.1
- * Rule: #define and #undef shall not be used on a reserved identifier 
- * or a macro name defined in a standard library.
+ * Rule: #define and #undef shall not be used on a reserved identifier or reserved macro name
  */
 
 /* --- NON-COMPLIANT --- */

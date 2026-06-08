@@ -2,8 +2,7 @@
 
 /**
  * Compliance Check: MISRA C:2012 Rule 15.6
- * Rule: All control structures (if, else, for, while) must use 
- * curly braces {} even for a single line of code.
+ * Rule:The body of an iteration-statement or a selection-statement shall be a compound-statement.
  */
 void test_compliance_15_6(int32_t system_error_code) {
 
