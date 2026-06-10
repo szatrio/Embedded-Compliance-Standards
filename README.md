@@ -262,7 +262,7 @@ Guidelines for safe, reliable, and portable C programming.
 | **Rule 22.2** | Mandatory |  | A block of memory shall only be freed if it was allocated by means of a Standard Library function |
 | **Rule 22.3** | Required |  | The same file shall not be open for read and write access at the same time on different streams |
 | **Rule 22.4** | Mandatory | ✅ | There shall be no attempt to write to a stream which has been opened as read-only |
-| **Rule 22.5** | Mandatory |  | A pointer to a FILE object shall not be dereferenced |
+| **Rule 22.5** | Mandatory | ✅ | A pointer to a FILE object shall not be dereferenced |
 | **Rule 22.6** | Mandatory |  | The value of a pointer to a FILE shall not be used after the associated stream has been closed |
 
 
