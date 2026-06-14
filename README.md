@@ -190,7 +190,7 @@ Guidelines for safe, reliable, and portable C programming.
 | **Rule 17.1** | Required |  | The features of <stdarg.h> shall not be used |
 | **Rule 17.2** | Required | ✅ | Functions shall not call themselves, either directly or indirectly |
 | **Rule 17.3** | Mandatory | ✅ | A function shall not be declared implicitly |
-| **Rule 17.4** | Mandatory |  | All exit paths from a function with non-void return type shall have an explicit return statement with an expression |
+| **Rule 17.4** | Mandatory | ✅ | All exit paths from a function with non-void return type shall have an explicit return statement with an expression |
 | **Rule 17.5** | Advisory |  | The function argument corresponding to a parameter declared to have an array type shall have an appropriate number of elements |
 | **Rule 17.6** | Mandatory |  | The declaration of an array parameter shall not contain the static keyword between the [ ] |
 | **Rule 17.7** | Required | ✅ | The value returned by a function having non-void return type shall be used |
