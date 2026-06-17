@@ -215,7 +215,7 @@ Guidelines for safe, reliable, and portable C programming.
 
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
-| **Rule 19.1** | Mandatory |  | An object shall not be assigned or copied to an overlapping object |
+| **Rule 19.1** | Mandatory | ✅ | An object shall not be assigned or copied to an overlapping object |
 | **Rule 19.2** | Advisory |  | The union keyword should not be used |
 
 #### 20. Preprocessing directives
