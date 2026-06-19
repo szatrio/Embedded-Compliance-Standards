@@ -21,7 +21,7 @@ Guidelines for safe, reliable, and portable C programming.
 
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
-| **Rule 2.1** | Required |  | A project shall not contain unreachable code |
+| **Rule 2.1** | Required | ✅ | A project shall not contain unreachable code |
 | **Rule 2.2** | Required |  | There shall be no dead code |
 | **Rule 2.3** | Advisory |  | A project should not contain unused type declarations |
 | **Rule 2.4** | Advisory |  | A project should not contain unused tag declarations |
