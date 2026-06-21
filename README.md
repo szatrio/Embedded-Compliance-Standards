@@ -13,16 +13,16 @@ Guidelines for safe, reliable, and portable C programming.
 
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
-| **Rule 1.1** | Required |  | The program shall contain no violations of the standard C syntax and constraints, and shall not exceed the implementation’s translation limits |
+| **Rule 1.1** | Required | ✅ | The program shall contain no violations of the standard C syntax and constraints, and shall not exceed the implementation’s translation limits |
 | **Rule 1.2** | Advisory |  | Language extensions should not be used |
-| **Rule 1.3** | Required |  | There shall be no occurrence of undefined or critical unspecified behaviour |
+| **Rule 1.3** | Required | ✅ | There shall be no occurrence of undefined or critical unspecified behaviour |
 
 #### 2. Unused code
 
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
-| **Rule 2.1** | Required | ✅ | A project shall not contain unreachable code |
-| **Rule 2.2** | Required |  | There shall be no dead code |
+| **Rule 2.1** | Required |  | A project shall not contain unreachable code |
+| **Rule 2.2** | Required | ✅ | There shall be no dead code |
 | **Rule 2.3** | Advisory |  | A project should not contain unused type declarations |
 | **Rule 2.4** | Advisory |  | A project should not contain unused tag declarations |
 | **Rule 2.5** | Advisory |  | A project should not contain unused macro declarations |

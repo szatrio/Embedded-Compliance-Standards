@@ -23,6 +23,6 @@ uint16_t calculate_data_good(uint16_t input) {
     uint16_t result = input * 2U;
     
     /* Compliant: All code is reachable and meaningful. */
-    result = result + 10U; 
+    result = result + 10U;
     return result;
 }
