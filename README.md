@@ -33,7 +33,7 @@ Guidelines for safe, reliable, and portable C programming.
 
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
-| **Rule 3.1** | Required |  | The character sequences /* and // shall not be used within a comment |
+| **Rule 3.1** | Required | ✅ | The character sequences /* and // shall not be used within a comment |
 | **Rule 3.2** | Required |  | Line-splicing shall not be used in // comments |
 
 
