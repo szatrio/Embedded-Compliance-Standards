@@ -41,7 +41,7 @@ Guidelines for safe, reliable, and portable C programming.
 
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
-| **Rule 4.1** | Required |  | Octal and hexadecimal escape sequences shall be terminated |
+| **Rule 4.1** | Required | ✅ | Octal and hexadecimal escape sequences shall be terminated |
 | **Rule 4.2** | Advisory | ✅ | Trigraphs should not be used |
 
 #### 5. Identifiers
