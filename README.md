@@ -48,7 +48,7 @@ Guidelines for safe, reliable, and portable C programming.
 
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
-| **Rule 5.1** | Required |  | External identifiers shall be distinct |
+| **Rule 5.1** | Required | ✅ | External identifiers shall be distinct |
 | **Rule 5.2** | Required |  | Identifiers declared in the same scope and name space shall be distinct |
 | **Rule 5.3** | Required |  | An identifier declared in an inner scope shall not hide an identifier declared in an outer scope |
 | **Rule 5.4** | Required |  | Macro identifiers shall be distinct |
