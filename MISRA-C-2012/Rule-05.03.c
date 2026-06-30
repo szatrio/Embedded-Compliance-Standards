@@ -8,12 +8,14 @@
 
 /* --- NON-COMPLIANT --- */
 void shadowing_bad(void) {
-    uint16_t status = 0U; /* Variable di outer scope */
+    uint16_t status = 0U; /* Variable in outer scope */
 
-    if (/* kondisi */ 1) {
-        uint16_t status = 1U; /* Violation: 'status' di sini menutupi 'status' luar */
+    if (1) {
+        /* Violation: 'status' declared here hides the 'status' from the outer scope */
+        uint16_t status = 1U; 
         
-        /* Jika Anda mengubah 'status' di sini, 'status' luar tidak akan terupdate */
+        /* Modifying 'status' here only affects the inner variable, 
+           leaving the outer 'status' unchanged. */
     }
 }
 
@@ -21,8 +23,9 @@ void shadowing_bad(void) {
 void shadowing_good(void) {
     uint16_t outer_status = 0U;
 
-    if (/* kondisi */ 1) {
-        uint16_t inner_status = 1U; /* Compliant: Nama berbeda, tidak ada shadowing */
+    if (1) {
+        /* Compliant: Distinct names prevent shadowing and improve clarity */
+        uint16_t inner_status = 1U; 
         outer_status = inner_status;
     }
 }
