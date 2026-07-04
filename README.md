@@ -55,7 +55,7 @@ Guidelines for safe, reliable, and portable C programming.
 | **Rule 5.5** | Required | ✅ | Identifiers shall be distinct from macro names |
 | **Rule 5.6** | Required | ✅ | A typedef name shall be a unique identifier |
 | **Rule 5.7** | Required | ✅ | A tag name shall be a unique identifier |
-| **Rule 5.8** | Required |  | Identifiers that define objects or functions with external linkage shall be unique |
+| **Rule 5.8** | Required | ✅ | Identifiers that define objects or functions with external linkage shall be unique |
 | **Rule 5.9** | Advisory |  | Identifiers that define objects or functions with internal linkage should be unique |
 
 #### 6. Types
