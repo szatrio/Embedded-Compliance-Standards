@@ -63,7 +63,7 @@ Guidelines for safe, reliable, and portable C programming.
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
 | **Rule 6.1** | Required | ✅ | Bit-fields shall only be declared with an appropriate type |
-| **Rule 6.2** | Required |  | Single-bit named bit fields shall not be of a signed type |
+| **Rule 6.2** | Required | ✅ | Single-bit named bit fields shall not be of a signed type |
 
 #### 7. Literals and constants
 
