@@ -69,7 +69,7 @@ Guidelines for safe, reliable, and portable C programming.
 
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
-| **Rule 7.1** | Required |  | Octal constants shall not be used |
+| **Rule 7.1** | Required | ✅ | Octal constants shall not be used |
 | **Rule 7.2** | Required |  | A “u” or “U” suffix shall be applied to all integer constants that are represented in an unsigned type |
 | **Rule 7.3** | Required |  | The lowercase character “l” shall not be used in a literal suffix |
 | **Rule 7.4** | Required |  | A string literal shall not be assigned to an object unless the object’s type is “pointer to const-qualified char” |
