@@ -79,7 +79,7 @@ Guidelines for safe, reliable, and portable C programming.
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
 | **Rule 8.1** | Required | ✅ | Types shall be explicitly specified |
-| **Rule 8.2** | Required |  | Function types shall be in prototype form with named parameter |
+| **Rule 8.2** | Required | ✅ | Function types shall be in prototype form with named parameter |
 | **Rule 8.3** | Required |  | All declarations of an object or function shall use the same names and type qualifiers |
 | **Rule 8.4** | Required |  | A compatible declaration shall be visible when an object or function with external linkage is defined |
 | **Rule 8.5** | Required |  | An external object or function shall be declared once in one and only one file |
