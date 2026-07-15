@@ -82,7 +82,7 @@ Guidelines for safe, reliable, and portable C programming.
 | **Rule 8.2** | Required | ✅ | Function types shall be in prototype form with named parameter |
 | **Rule 8.3** | Required | ✅ | All declarations of an object or function shall use the same names and type qualifiers |
 | **Rule 8.4** | Required | ✅ | A compatible declaration shall be visible when an object or function with external linkage is defined |
-| **Rule 8.5** | Required |  | An external object or function shall be declared once in one and only one file |
+| **Rule 8.5** | Required | ✅ | An external object or function shall be declared once in one and only one file |
 | **Rule 8.6** | Required |  | An identifier with external linkage shall have exactly one external definition |
 | **Rule 8.7** | Advisory | ✅ | Functions and objects should not be defined with external linkage if they are referenced in only one translation unit |
 | **Rule 8.8** | Required |  | The static storage class specifier shall be used in all declarations of objects and functions that have internal linkage |
