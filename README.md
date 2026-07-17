@@ -85,7 +85,7 @@ Guidelines for safe, reliable, and portable C programming.
 | **Rule 8.5** | Required | ✅ | An external object or function shall be declared once in one and only one file |
 | **Rule 8.6** | Required | ✅ | An identifier with external linkage shall have exactly one external definition |
 | **Rule 8.7** | Advisory | ✅ | Functions and objects should not be defined with external linkage if they are referenced in only one translation unit |
-| **Rule 8.8** | Required |  | The static storage class specifier shall be used in all declarations of objects and functions that have internal linkage |
+| **Rule 8.8** | Required | ✅ | The static storage class specifier shall be used in all declarations of objects and functions that have internal linkage |
 | **Rule 8.9** | Advisory |  | An object should be defined at block scope if its identifier only appears in a single function |
 | **Rule 8.10** | Required |  | An inline function shall be declared with the static storage class |
 | **Rule 8.11** | Advisory |  | When an array with external linkage is declared, its size should be explicitly specified |
