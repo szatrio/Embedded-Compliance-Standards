@@ -89,7 +89,7 @@ Guidelines for safe, reliable, and portable C programming.
 | **Rule 8.9** | Advisory |  | An object should be defined at block scope if its identifier only appears in a single function |
 | **Rule 8.10** | Required | ✅ | An inline function shall be declared with the static storage class |
 | **Rule 8.11** | Advisory |  | When an array with external linkage is declared, its size should be explicitly specified |
-| **Rule 8.12** | Required |  | Within an enumerator list, the value of an implicitly-specified enumeration constant shall be unique |
+| **Rule 8.12** | Required | ✅ | Within an enumerator list, the value of an implicitly-specified enumeration constant shall be unique |
 | **Rule 8.13** | Advisory |  | A pointer should point to a const-qualified type whenever possible |
 | **Rule 8.14** | Required |  | The restrict type qualifier shall not be used |
 
