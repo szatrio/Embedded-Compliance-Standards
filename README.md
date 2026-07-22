@@ -99,7 +99,7 @@ Guidelines for safe, reliable, and portable C programming.
 | :--- | :--- | :--- | :--- |
 | **Rule 9.1** | Mandatory | ✅ | The value of an object with automatic storage duration shall not be read before it has been set |
 | **Rule 9.2** | Required | ✅ | The initializer for an aggregate or union shall be enclosed in braces |
-| **Rule 9.3** | Required |  | Arrays shall not be partially initialized |
+| **Rule 9.3** | Required | ✅ | Arrays shall not be partially initialized |
 | **Rule 9.4** | Required |  | An element of an object shall not be initialized more than once |
 | **Rule 9.5** | Required |  | Where designated initializers are used to initialize an array object the size of the array shall be specified explicitly |
 
