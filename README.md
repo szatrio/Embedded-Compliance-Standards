@@ -112,7 +112,7 @@ Guidelines for safe, reliable, and portable C programming.
 | **Rule 10.3** | Required | ✅ | The value of an expression shall not be assigned to an object with a narrower essential type or of a different essential type category |
 | **Rule 10.4** | Required | ✅ | Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category |
 | **Rule 10.5** | Advisory |  | The value of an expression should not be cast to an inappropriate essential type |
-| **Rule 10.6** | Required |  | The value of a composite expression shall not be assigned to an object with wider essential type |
+| **Rule 10.6** | Required | ✅ | The value of a composite expression shall not be assigned to an object with wider essential type |
 | **Rule 10.7** | Required |  | If a composite expression is used as one operand of an operator in which the usual arithmetic conversions are performed then the other operand shall not have wider essential type |
 | **Rule 10.8** | Required |  | The value of a composite expression shall not be cast to a different essential type category or a wider essential type |
 
