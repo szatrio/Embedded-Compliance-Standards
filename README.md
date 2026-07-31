@@ -127,7 +127,7 @@ Guidelines for safe, reliable, and portable C programming.
 | **Rule 11.5** | Advisory |  | A conversion should not be performed from pointer to void into pointer to object |
 | **Rule 11.6** | Required | ✅ | A cast shall not be performed between pointer to void and an arithmetic type |
 | **Rule 11.7** | Required | ✅ | A cast shall not be performed between pointer to object and a non- integer arithmetic type |
-| **Rule 11.8** | Required |  | A cast shall not remove any const or volatile qualification from the type pointed to by a pointer |
+| **Rule 11.8** | Required | ✅ | A cast shall not remove any const or volatile qualification from the type pointed to by a pointer |
 | **Rule 11.9** | Required |  | The macro NULL shall be the only permitted form of integer null pointer constant |
 
 #### 12. Expressions
