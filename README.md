@@ -135,7 +135,7 @@ Guidelines for safe, reliable, and portable C programming.
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
 | **Rule 12.1** | Advisory | ✅ | The precedence of operators within expressions should be made explicit |
-| **Rule 12.2** | Required |  | The right hand operand of a shift operator shall lie in the range zero to one less than the width in bits of the essential type of the left hand operand |
+| **Rule 12.2** | Required | ✅ | The right hand operand of a shift operator shall lie in the range zero to one less than the width in bits of the essential type of the left hand operand |
 | **Rule 12.3** | Advisory |  | The comma operator should not be used |
 | **Rule 12.4** | Advisory |  | Evaluation of constant expressions should not lead to unsigned integer wrap-around |
 
