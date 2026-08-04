@@ -143,7 +143,7 @@ Guidelines for safe, reliable, and portable C programming.
 
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
-| **Rule 13.1** | Required |  | Initializer lists shall not contain persistent side effects |
+| **Rule 13.1** | Required | ✅ | Initializer lists shall not contain persistent side effects |
 | **Rule 13.2** | Required | ✅ | The value of an expression and its persistent side effects shall be the same under all permitted evaluation orders |
 | **Rule 13.3** | Advisory |  | A full expression containing an increment (++) or decrement (--) operator should have no other potential side effects other than that caused by the increment or decrement operator |
 | **Rule 13.4** | Advisory |  | The result of an assignment operator should not be used |
