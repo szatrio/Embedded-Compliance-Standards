@@ -147,7 +147,7 @@ Guidelines for safe, reliable, and portable C programming.
 | **Rule 13.2** | Required | ✅ | The value of an expression and its persistent side effects shall be the same under all permitted evaluation orders |
 | **Rule 13.3** | Advisory |  | A full expression containing an increment (++) or decrement (--) operator should have no other potential side effects other than that caused by the increment or decrement operator |
 | **Rule 13.4** | Advisory |  | The result of an assignment operator should not be used |
-| **Rule 13.5** | Required |  | The right hand operand of a logical && or || operator shall not contain persistent side effects |
+| **Rule 13.5** | Required | ✅ | The right hand operand of a logical && or || operator shall not contain persistent side effects |
 | **Rule 13.6** | Mandatory | ✅ | The operand of the sizeof operator shall not contain any expression which has potential side effects |
 
 #### 14. Control statement expressions
