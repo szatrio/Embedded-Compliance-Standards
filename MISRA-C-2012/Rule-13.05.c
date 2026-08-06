@@ -1,6 +1,11 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+/**
+ * Compliance Check: MISRA C:2012 Rule 13.5
+ * Rule: The right hand operand of a logical && or || operator shall not contain persistent side effects.
+ */
+
 /* Global state for demonstration */
 static uint16_t g_status_flag = 0U;
 
