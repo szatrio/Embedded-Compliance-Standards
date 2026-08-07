@@ -155,7 +155,7 @@ Guidelines for safe, reliable, and portable C programming.
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
 | **Rule 14.1** | Required | ✅ | A loop counter shall not have essentially floating type |
-| **Rule 14.2** | Required |  | A for loop shall be well-formed |
+| **Rule 14.2** | Required | ✅ | A for loop shall be well-formed |
 | **Rule 14.3** | Required |  | Controlling expressions shall not be invariant |
 | **Rule 14.4** | Required | ✅ | The controlling expression of an if statement and the controlling expression of an iteration-statement shall have essentially Boolean type |
 
