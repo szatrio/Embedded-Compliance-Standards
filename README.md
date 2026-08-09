@@ -164,7 +164,7 @@ Guidelines for safe, reliable, and portable C programming.
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
 | **Rule 15.1** | Advisory | ✅ | The goto statement should not be used |
-| **Rule 15.2** | Required |  | The goto statement shall jump to a label declared later in the same function |
+| **Rule 15.2** | Required | ✅ | The goto statement shall jump to a label declared later in the same function |
 | **Rule 15.3** | Required |  | Any label referenced by a goto statement shall be declared in the same block, or in any block enclosing the goto statement |
 | **Rule 15.4** | Advisory |  | There should be no more than one break or goto statement used to terminate any iteration statement |
 | **Rule 15.5** | Advisory |  | A function should have a single point of exit at the end |
