@@ -175,7 +175,7 @@ Guidelines for safe, reliable, and portable C programming.
 
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
-| **Rule 16.1** | Required |  | All switch statements shall be well-formed |
+| **Rule 16.1** | Required | ✅ | All switch statements shall be well-formed |
 | **Rule 16.2** | Required |  | A switch label shall only be used when the most closely-enclosing compound statement is the body of a switch statement |
 | **Rule 16.3** | Required |  | An unconditional break statement shall terminate every switch-clause |
 | **Rule 16.4** | Required | ✅ | Every switch statement shall have a default label |
