@@ -108,7 +108,7 @@ Guidelines for safe, reliable, and portable C programming.
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
 | **Rule 10.1** | Required | ✅ | Operands shall not be of an inappropriate essential type |
-| **Rule 10.2** | Required |  | Expressions of essentially character type shall not be used inappropriately in addition and subtraction operations |
+| **Rule 10.2** | Required | ✅ | Expressions of essentially character type shall not be used inappropriately in addition and subtraction operations |
 | **Rule 10.3** | Required | ✅ | The value of an expression shall not be assigned to an object with a narrower essential type or of a different essential type category |
 | **Rule 10.4** | Required | ✅ | Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category |
 | **Rule 10.5** | Advisory |  | The value of an expression should not be cast to an inappropriate essential type |
