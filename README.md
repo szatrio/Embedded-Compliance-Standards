@@ -180,7 +180,7 @@ Guidelines for safe, reliable, and portable C programming.
 | **Rule 16.3** | Required | ✅ | An unconditional break statement shall terminate every switch-clause |
 | **Rule 16.4** | Required | ✅ | Every switch statement shall have a default label |
 | **Rule 16.5** | Required | ✅ | A default label shall appear as either the first or the last switch label of a switch statement |
-| **Rule 16.6** | Required |  | Every switch statement shall have at least two switch-clauses |
+| **Rule 16.6** | Required | ✅ | Every switch statement shall have at least two switch-clauses |
 | **Rule 16.7** | Required |  | A switch-expression shall not have essentially Boolean type |
 
 #### 17. Functions
