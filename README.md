@@ -187,7 +187,7 @@ Guidelines for safe, reliable, and portable C programming.
 
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
-| **Rule 17.1** | Required |  | The features of <stdarg.h> shall not be used |
+| **Rule 17.1** | Required | ✅ | The features of <stdarg.h> shall not be used |
 | **Rule 17.2** | Required | ✅ | Functions shall not call themselves, either directly or indirectly |
 | **Rule 17.3** | Mandatory | ✅ | A function shall not be declared implicitly |
 | **Rule 17.4** | Mandatory | ✅ | All exit paths from a function with non-void return type shall have an explicit return statement with an expression |
