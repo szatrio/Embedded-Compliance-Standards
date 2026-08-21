@@ -203,7 +203,7 @@ Guidelines for safe, reliable, and portable C programming.
 | :--- | :--- | :--- | :--- |
 | **Rule 18.1** | Required | ✅ | A pointer resulting from arithmetic on a pointer operand shall address an element of the same array as that pointer operand |
 | **Rule 18.2** | Required | ✅ | Subtraction between pointers shall only be applied to pointers that address elements of the same array |
-| **Rule 18.3** | Required |  | The relational operators >, >=, < and <= shall not be applied to objects of pointer type except where they point into the same object |
+| **Rule 18.3** | Required | ✅ | The relational operators >, >=, < and <= shall not be applied to objects of pointer type except where they point into the same object |
 | **Rule 18.4** | Advisory | ✅ | The +, -, += and -= operators should not be applied to an expression of pointer type |
 | **Rule 18.5** | Advisory |  | Declarations should contain no more than two levels of pointer nesting |
 | **Rule 18.6** | Required |  | The address of an object with automatic storage shall not be copied to another object that persists after the first object has ceased to exist |
