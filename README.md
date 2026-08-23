@@ -207,7 +207,7 @@ Guidelines for safe, reliable, and portable C programming.
 | **Rule 18.4** | Advisory | ✅ | The +, -, += and -= operators should not be applied to an expression of pointer type |
 | **Rule 18.5** | Advisory |  | Declarations should contain no more than two levels of pointer nesting |
 | **Rule 18.6** | Required | ✅ | The address of an object with automatic storage shall not be copied to another object that persists after the first object has ceased to exist |
-| **Rule 18.7** | Required |  | Flexible array members shall not be declared |
+| **Rule 18.7** | Required | ✅ | Flexible array members shall not be declared |
 | **Rule 18.8** | Required |  | Variable-length array types shall not be used |
 
 
