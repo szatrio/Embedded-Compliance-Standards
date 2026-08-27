@@ -225,7 +225,7 @@ Guidelines for safe, reliable, and portable C programming.
 | **Rule 20.1** | Advisory |  | #include directives should only be preceded by preprocessor directives or comments |
 | **Rule 20.2** | Required | ✅ | The ', " or \ characters and the /* or // character sequences shall not occur in a header file name |
 | **Rule 20.3** | Required | ✅ | The #include directive shall be followed by either a <filename> or "filename" sequence |
-| **Rule 20.4** | Required |  | A macro shall not be defined with the same name as a keyword |
+| **Rule 20.4** | Required | ✅ | A macro shall not be defined with the same name as a keyword |
 | **Rule 20.5** | Advisory |  | #undef should not be used |
 | **Rule 20.6** | Required |  | Tokens that look like a preprocessing directive shall not occur within a macro argument |
 | **Rule 20.7** | Required | ✅ | Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses |
