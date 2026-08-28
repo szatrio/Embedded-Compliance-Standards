@@ -227,7 +227,7 @@ Guidelines for safe, reliable, and portable C programming.
 | **Rule 20.3** | Required | ✅ | The #include directive shall be followed by either a <filename> or "filename" sequence |
 | **Rule 20.4** | Required | ✅ | A macro shall not be defined with the same name as a keyword |
 | **Rule 20.5** | Advisory |  | #undef should not be used |
-| **Rule 20.6** | Required |  | Tokens that look like a preprocessing directive shall not occur within a macro argument |
+| **Rule 20.6** | Required | ✅ | Tokens that look like a preprocessing directive shall not occur within a macro argument |
 | **Rule 20.7** | Required | ✅ | Expressions resulting from the expansion of macro parameters shall be enclosed in parentheses |
 | **Rule 20.8** | Required |  | The controlling expression of a #if or #elif preprocessing directive shall evaluate to 0 or 1 |
 | **Rule 20.9** | Required |  | All identifiers used in the controlling expression of #if or #elif preprocessing directives shall be #define’d before evaluation |
