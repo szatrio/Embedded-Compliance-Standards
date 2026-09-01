@@ -233,7 +233,7 @@ Guidelines for safe, reliable, and portable C programming.
 | **Rule 20.9** | Required | ✅ | All identifiers used in the controlling expression of #if or #elif preprocessing directives shall be #define’d before evaluation |
 | **Rule 20.10** | Advisory |  | The # and ## preprocessor operators should not be used |
 | **Rule 20.11** | Required | ✅ | A macro parameter immediately following a # operator shall not immediately be followed by a ## operator |
-| **Rule 20.12** | Required |  | A macro parameter used as an operand to the # or ## operators, which is itself subject to further macro replacement, shall only be used as an operand to these operators |
+| **Rule 20.12** | Required | ✅ | A macro parameter used as an operand to the # or ## operators, which is itself subject to further macro replacement, shall only be used as an operand to these operators |
 | **Rule 20.13** | Required |  | A line whose first token is # shall be a valid preprocessing directive |
 | **Rule 20.14** | Required |  | All #else, #elif and #endif preprocessor directives shall reside in the same file as the #if, #ifdef or #ifndef directive to which they are related |
 
