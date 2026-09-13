@@ -251,7 +251,7 @@ Guidelines for safe, reliable, and portable C programming.
 | **Rule 21.8** | Required | ✅ | The library functions abort, exit, getenv and system of <stdlib.h> shall not be used |
 | **Rule 21.9** | Required | ✅ | The library functions bsearch and qsort of <stdlib.h> shall not be used |
 | **Rule 21.10** | Required | ✅ | The Standard Library time and date functions shall not be used |
-| **Rule 21.11** | Required |  | The standard header file <tgmath.h> shall not be used |
+| **Rule 21.11** | Required | ✅ | The standard header file <tgmath.h> shall not be used |
 | **Rule 21.12** | Advisory |  | The exception handling features of <fenv.h> should not be used |
 
 #### 22. Resources
