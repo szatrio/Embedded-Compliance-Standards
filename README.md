@@ -14,7 +14,7 @@ Guidelines for safe, reliable, and portable C programming.
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
 | **Rule 1.1** | Required | ✅ | The program shall contain no violations of the standard C syntax and constraints, and shall not exceed the implementation’s translation limits |
-| **Rule 1.2** | Advisory |  | Language extensions should not be used |
+| **Rule 1.2** | Advisory | ✅ | Language extensions should not be used |
 | **Rule 1.3** | Required | ✅ | There shall be no occurrence of undefined or critical unspecified behaviour |
 
 #### 2. Unused code
