@@ -124,7 +124,7 @@ Guidelines for safe, reliable, and portable C programming.
 | **Rule 11.2** | Required | ✅ | Conversions shall not be performed between a pointer to an incomplete type and any other type |
 | **Rule 11.3** | Required | ✅ | A cast shall not be performed between a pointer to object type and a pointer to a different object type |
 | **Rule 11.4** | Advisory | ✅ | A conversion should not be performed between a pointer to object and an integer type |
-| **Rule 11.5** | Advisory |  | A conversion should not be performed from pointer to void into pointer to object |
+| **Rule 11.5** | Advisory | ✅ | A conversion should not be performed from pointer to void into pointer to object |
 | **Rule 11.6** | Required | ✅ | A cast shall not be performed between pointer to void and an arithmetic type |
 | **Rule 11.7** | Required | ✅ | A cast shall not be performed between pointer to object and a non- integer arithmetic type |
 | **Rule 11.8** | Required | ✅ | A cast shall not remove any const or volatile qualification from the type pointed to by a pointer |
