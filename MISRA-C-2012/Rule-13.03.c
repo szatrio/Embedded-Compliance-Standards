@@ -1,52 +1,60 @@
 #include <stdint.h>
 
 /**
- * Compliance Check: MISRA C:2012 Rule 12.3
- * Rule: The comma operator should not be used.
+ * Compliance Check: MISRA C:2012 Rule 13.3
+ * Rule: A full expression containing an increment (++) or decrement (--)
+ *       operator should have no other potential side effects.
  */
 
-/* External function declaration */
-extern void process_values(uint32_t a, uint32_t b);
+/* External function with side effect */
+extern uint32_t get_next_value(void);
 
 /* --- NON-COMPLIANT EXAMPLES --- */
 
-void comma_operator_bad(uint32_t x, uint32_t y)
+void increment_side_effect_bad(uint32_t x, uint32_t y)
 {
     uint32_t a;
     uint32_t b;
 
-    /* Non-compliant: Comma operator used in expression assignment */
-    a = (x++, y + 1U);
+    /* Non-compliant: Increment operator combined with assignment (another side effect) */
+    a = x++;
 
-    /* Non-compliant: Comma operator used inside loop header */
-    for (a = 0U, b = 10U; a < b; a++, b--)
-    {
-        /* ... */
-    }
+    /* Non-compliant: Increment operator combined with a function call side effect */
+    b = y++ + get_next_value();
+
+    (void)a;
+    (void)b;
 }
 
 
 /* --- MISRA COMPLIANT EXAMPLES --- */
 
-void comma_operator_good(uint32_t x, uint32_t y)
+void increment_side_effect_good(uint32_t x, uint32_t y)
 {
     uint32_t a;
     uint32_t b;
+    uint32_t func_val;
 
-    /* Compliant: Split into separate, clear statements */
+    /* Compliant: Assignment separated from increment operator */
+    a = x;
     x++;
-    a = y + 1U;
 
-    /* Compliant: Separate initialization and loop step statements */
-    a = 0U;
-    b = 10U;
-    while (a < b)
+    /* Compliant: Function call and increment isolated into distinct full expressions */
+    func_val = get_next_value();
+    b = y + func_val;
+    y++;
+
+    (void)a;
+    (void)b;
+}
+
+void loop_increment_good(void)
+{
+    uint32_t i;
+
+    /* Compliant: In a standard for-loop header, the increment is an isolated full expression */
+    for (i = 0U; i < 10U; i++)
     {
-        /* Loop operations */
-        a++;
-        b--;
+        /* Loop body */
     }
-
-    /* Compliant: Comma used as function argument separator (NOT a comma operator) */
-    process_values(a, b);
 }
