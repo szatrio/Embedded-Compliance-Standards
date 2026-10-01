@@ -205,7 +205,7 @@ Guidelines for safe, reliable, and portable C programming.
 | **Rule 18.2** | Required | ✅ | Subtraction between pointers shall only be applied to pointers that address elements of the same array |
 | **Rule 18.3** | Required | ✅ | The relational operators >, >=, < and <= shall not be applied to objects of pointer type except where they point into the same object |
 | **Rule 18.4** | Advisory | ✅ | The +, -, += and -= operators should not be applied to an expression of pointer type |
-| **Rule 18.5** | Advisory |  | Declarations should contain no more than two levels of pointer nesting |
+| **Rule 18.5** | Advisory | ✅ | Declarations should contain no more than two levels of pointer nesting |
 | **Rule 18.6** | Required | ✅ | The address of an object with automatic storage shall not be copied to another object that persists after the first object has ceased to exist |
 | **Rule 18.7** | Required | ✅ | Flexible array members shall not be declared |
 | **Rule 18.8** | Required | ✅ | Variable-length array types shall not be used |
@@ -216,7 +216,7 @@ Guidelines for safe, reliable, and portable C programming.
 | Rule ID | Category | Status | Rule Title |
 | :--- | :--- | :--- | :--- |
 | **Rule 19.1** | Mandatory | ✅ | An object shall not be assigned or copied to an overlapping object |
-| **Rule 19.2** | Advisory |  | The union keyword should not be used |
+| **Rule 19.2** | Advisory | ✅ | The union keyword should not be used |
 
 #### 20. Preprocessing directives
 
