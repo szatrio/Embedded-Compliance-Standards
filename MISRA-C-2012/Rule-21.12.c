@@ -1,44 +1,56 @@
 #include <stdint.h>
+#include <stdbool.h>
+#include <float.h>
 
 /**
- * Compliance Check: MISRA C:2012 Rule 20.10
- * Rule: The # and ## preprocessor operators should not be used.
+ * Compliance Check: MISRA C:2012 Rule 21.12
+ * Rule: The exception handling features of <fenv.h> should not be used.
  */
 
-/* --- NON-COMPLIANT EXAMPLES --- */
+/* --- NON-COMPLIANT EXAMPLE --- */
 
-/* Non-compliant: Use of '#' operator for stringification */
-#define STRINGIFY(x) #x
+#if 0
+#include <fenv.h>
 
-/* Non-compliant: Use of '##' operator for token pasting */
-#define CONCAT_VAR(prefix, num) prefix ## num
-
-void demo_bad(void)
+float divide_bad(float numerator, float denominator)
 {
-    /* Generates: uint32_t sensor_1 = 100U; */
-    uint32_t CONCAT_VAR(sensor_, 1) = 100U;
+    float result = 0.0f;
 
-    /* Generates string "sensor_1" */
-    const char *str = STRINGIFY(sensor_1);
+    /* Non-compliant: Using <fenv.h> exception handling features */
+    feclearexcept(FE_ALL_EXCEPT);
+    result = numerator / denominator;
 
-    (void)sensor_1;
-    (void)str;
+    if (fetestexcept(FE_DIVBYZERO) != 0)
+    {
+        /* Handle division by zero via fenv exception flag */
+        result = 0.0f;
+    }
+
+    return result;
 }
+#endif
 
 
-/* --- MISRA COMPLIANT EXAMPLES --- */
+/* --- MISRA COMPLIANT EXAMPLE --- */
 
-/* Compliant: Declare explicit identifiers without token-pasting tricks */
-static uint32_t g_sensor_1 = 100U;
-static uint32_t g_sensor_2 = 200U;
-
-/* Compliant: Use explicit C strings instead of stringification (#) */
-static const char g_sensor_1_name[] = "sensor_1";
-
-void demo_good(void)
+/* Compliant: Perform range/domain checks BEFORE performing float operations */
+bool divide_good(float numerator, float denominator, float *p_result)
 {
-    g_sensor_1 = 105U;
-    g_sensor_2 = 205U;
+    bool is_success = false;
 
-    (void)g_sensor_1_name;
+    if (p_result != NULL)
+    {
+        /* Compliant: Prevent division by zero and extreme values explicitly */
+        if ((denominator > FLT_EPSILON) || (denominator < -FLT_EPSILON))
+        {
+            *p_result = numerator / denominator;
+            is_success = true;
+        }
+        else
+        {
+            *p_result = 0.0f; /* Safe fallback */
+        }
+    }
+
+    return is_success;
 }
