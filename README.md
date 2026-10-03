@@ -9,6 +9,48 @@ This repository contains compliance guidelines for embedded systems development.
 ### MISRA C:2012
 Guidelines for safe, reliable, and portable C programming.
 
+---
+
+#### 7.1 The implementation
+
+| Directive ID | Category | Status | Directive Title |
+| :--- | :--- | :--- | :--- |
+| **Dir 1.1** | Required |  | Any implementation-defined behaviour on which the output of the program depends shall be documented and understood |
+
+#### 7.2 Compilation and build
+
+| Directive ID | Category | Status | Directive Title |
+| :--- | :--- | :--- | :--- |
+| **Dir 2.1** | Required |  | All source files shall compile without any compilation errors |
+
+#### 7.3 Requirements traceability
+
+| Directive ID | Category | Status | Directive Title |
+| :--- | :--- | :--- | :--- |
+| **Dir 3.1** | Required |  | All code shall be traceable to documented requirements |
+
+#### 7.4 Code design
+
+| Directive ID | Category | Status | Directive Title |
+| :--- | :--- | :--- | :--- |
+| **Dir 4.1** | Required |  | Run-time failures shall be minimized |
+| **Dir 4.2** | Advisory |  | All usage of assembly language should be documented |
+| **Dir 4.3** | Required |  | Assembly language shall be encapsulated and isolated |
+| **Dir 4.4** | Advisory |  | Sections of code should not be “commented out” |
+| **Dir 4.5** | Advisory |  | Identifiers in the same name space with overlapping visibility should be typographically unambiguous |
+| **Dir 4.6** | Advisory |  | typedefs that indicate size and signedness should be used in place of the basic numerical types |
+| **Dir 4.7** | Required |  | If a function returns error information, then that error information shall be tested |
+| **Dir 4.8** | Advisory |  | If a pointer to a structure or union is never dereferenced within a translation unit, then the implementation of the object should be hidden |
+| **Dir 4.9** | Advisory |  | A function should be used in preference to a function-like macro where they are interchangeable |
+| **Dir 4.10** | Required |  | Precautions shall be taken in order to prevent the contents of a header file being included more than once |
+| **Dir 4.11** | Required |  | The validity of values passed to library functions shall be checked |
+| **Dir 4.12** | Required |  | Dynamic memory allocation shall not be used |
+| **Dir 4.13** | Advisory |  | Functions which are designed to provide operations on a resource should be called in an appropriate sequence |
+
+---
+
+### Rules
+
 #### 1. A standard C environment
 
 | Rule ID | Category | Status | Rule Title |
