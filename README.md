@@ -13,25 +13,25 @@ Guidelines for safe, reliable, and portable C programming.
 
 ### Directives
 
-#### 7.1 The implementation
+#### 1. The implementation
 
 | Directive ID | Category | Status | Directive Title |
 | :--- | :--- | :--- | :--- |
 | **Dir 1.1** | Required | ✅ | Any implementation-defined behaviour on which the output of the program depends shall be documented and understood |
 
-#### 7.2 Compilation and build
+#### 2. Compilation and build
 
 | Directive ID | Category | Status | Directive Title |
 | :--- | :--- | :--- | :--- |
 | **Dir 2.1** | Required | ✅ | All source files shall compile without any compilation errors |
 
-#### 7.3 Requirements traceability
+#### 3. Requirements traceability
 
 | Directive ID | Category | Status | Directive Title |
 | :--- | :--- | :--- | :--- |
 | **Dir 3.1** | Required | ✅ | All code shall be traceable to documented requirements |
 
-#### 7.4 Code design
+#### 4. Code design
 
 | Directive ID | Category | Status | Directive Title |
 | :--- | :--- | :--- | :--- |
