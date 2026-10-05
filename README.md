@@ -35,8 +35,8 @@ Guidelines for safe, reliable, and portable C programming.
 
 | Directive ID | Category | Status | Directive Title |
 | :--- | :--- | :--- | :--- |
-| **Dir 4.1** | Required |  | Run-time failures shall be minimized |
-| **Dir 4.2** | Advisory |  | All usage of assembly language should be documented |
+| **Dir 4.1** | Required | ✅ | Run-time failures shall be minimized |
+| **Dir 4.2** | Advisory | ✅ | All usage of assembly language should be documented |
 | **Dir 4.3** | Required |  | Assembly language shall be encapsulated and isolated |
 | **Dir 4.4** | Advisory |  | Sections of code should not be “commented out” |
 | **Dir 4.5** | Advisory |  | Identifiers in the same name space with overlapping visibility should be typographically unambiguous |
