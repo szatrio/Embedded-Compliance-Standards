@@ -39,8 +39,8 @@ Guidelines for safe, reliable, and portable C programming.
 | **Dir 4.2** | Advisory | ✅ | All usage of assembly language should be documented |
 | **Dir 4.3** | Required | ✅ | Assembly language shall be encapsulated and isolated |
 | **Dir 4.4** | Advisory | ✅ | Sections of code should not be “commented out” |
-| **Dir 4.5** | Advisory |  | Identifiers in the same name space with overlapping visibility should be typographically unambiguous |
-| **Dir 4.6** | Advisory |  | typedefs that indicate size and signedness should be used in place of the basic numerical types |
+| **Dir 4.5** | Advisory | ✅ | Identifiers in the same name space with overlapping visibility should be typographically unambiguous |
+| **Dir 4.6** | Advisory | ✅ | typedefs that indicate size and signedness should be used in place of the basic numerical types |
 | **Dir 4.7** | Required |  | If a function returns error information, then that error information shall be tested |
 | **Dir 4.8** | Advisory |  | If a pointer to a structure or union is never dereferenced within a translation unit, then the implementation of the object should be hidden |
 | **Dir 4.9** | Advisory |  | A function should be used in preference to a function-like macro where they are interchangeable |
