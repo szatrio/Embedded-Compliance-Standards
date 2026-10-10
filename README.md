@@ -43,7 +43,7 @@ Guidelines for safe, reliable, and portable C programming.
 | **Dir 4.6** | Advisory | ✅ | typedefs that indicate size and signedness should be used in place of the basic numerical types |
 | **Dir 4.7** | Required | ✅ | If a function returns error information, then that error information shall be tested |
 | **Dir 4.8** | Advisory | ✅ | If a pointer to a structure or union is never dereferenced within a translation unit, then the implementation of the object should be hidden |
-| **Dir 4.9** | Advisory |  | A function should be used in preference to a function-like macro where they are interchangeable |
+| **Dir 4.9** | Advisory | ✅ | A function should be used in preference to a function-like macro where they are interchangeable |
 | **Dir 4.10** | Required |  | Precautions shall be taken in order to prevent the contents of a header file being included more than once |
 | **Dir 4.11** | Required |  | The validity of values passed to library functions shall be checked |
 | **Dir 4.12** | Required |  | Dynamic memory allocation shall not be used |
