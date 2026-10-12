@@ -46,7 +46,7 @@ Guidelines for safe, reliable, and portable C programming.
 | **Dir 4.9** | Advisory | ✅ | A function should be used in preference to a function-like macro where they are interchangeable |
 | **Dir 4.10** | Required | ✅ | Precautions shall be taken in order to prevent the contents of a header file being included more than once |
 | **Dir 4.11** | Required | ✅ | The validity of values passed to library functions shall be checked |
-| **Dir 4.12** | Required |  | Dynamic memory allocation shall not be used |
+| **Dir 4.12** | Required | ✅ | Dynamic memory allocation shall not be used |
 | **Dir 4.13** | Advisory |  | Functions which are designed to provide operations on a resource should be called in an appropriate sequence |
 
 ---
